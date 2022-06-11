@@ -2,8 +2,6 @@
 
 ## Environment
  - flask
- - flask_socketio
- - nodejs
  - gunicorn
 
 ## Instruction to run the code
