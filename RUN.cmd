@@ -2,6 +2,8 @@
 :: Environment
 :: - flask
 :: - gunicorn
+:: - numpy
+:: - opencv-python
 :: email: r10525073@g.ntu.edu.tw
 @echo off
 python src\main.py

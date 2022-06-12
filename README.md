@@ -5,6 +5,8 @@
 ## Environment
  - flask
  - gunicorn
+ - numpy
+ - opencv-python
 
 ## Instruction to run the code
 1. Install Dependecies
@@ -22,3 +24,7 @@ pip install -r requirements.txt
 
 ## Test Images
 We provide test images for evaluation at `test` folder.
+
+## Note
+Ice coast image from: <https://wallhere.com/en/wallpaper/717597>.
+Polar bear image from: <https://www.cs.huji.ac.il/~danix/mvclone/>.
