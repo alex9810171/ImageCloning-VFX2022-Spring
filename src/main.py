@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, Response, jsonify
 import numpy as np
 import cv2
-from cloning import cloning_api_for_web
+from src.cloning import cloning_api_for_web
 import requests
 from base64 import b64encode
 import random
