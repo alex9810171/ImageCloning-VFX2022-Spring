@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 from upload_image import upload_to_imgur
 from cloning import cloning_api
-
+'''
 config = {
     'background_image_path': r'test/ice-coast.png',
     'test_image_path': r'test/polarbear.png',
@@ -14,7 +14,7 @@ config = {
     'kernel': np.ones((3, 3), np.uint8),
     'object_threshold': 500
 }
-
+'''
 app = Flask(__name__)
 #bkg_image = cv2.imread(config['background_image_path'])
 
