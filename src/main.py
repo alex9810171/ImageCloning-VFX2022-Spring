@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 from upload_image import upload_to_imgur
 from cloning import cloning_api
-'''
+
 config = {
     'background_image_path': r'test/ice-coast.png',
     'test_image_path': r'test/polarbear.png',
@@ -14,9 +14,9 @@ config = {
     'kernel': np.ones((3, 3), np.uint8),
     'object_threshold': 500
 }
-'''
+
 app = Flask(__name__)
-#bkg_image = cv2.imread(config['background_image_path'])
+bkg_image = cv2.imread(config['background_image_path'])
 
 @app.route("/")
 def home():
@@ -25,7 +25,7 @@ def home():
 @app.route("/cloning")
 def cloning():
     return render_template('cloning.html', image_url=request.args.get('image_url', ''))
-'''
+
 @app.route('/api/cloning', methods=['POST'])
 def cloning_api():
     if 'image' not in request.files:
@@ -42,6 +42,6 @@ def cloning_api():
         return Response(status=500)
     else:
         return jsonify({'result': result_link})
-'''
+
 if __name__ == '__main__':
     app.run('0.0.0.0', debug=True)
