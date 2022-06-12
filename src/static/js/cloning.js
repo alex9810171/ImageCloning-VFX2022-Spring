@@ -16,7 +16,7 @@ document.getElementById('cloning_button').addEventListener('click', function () 
         axios.post('/api/cloning', form).then(function (response) {
             console.log('Upload Success');
             document.getElementById('result_image').src = response.data.result;
-            document.getElementById('text-tab').disabled = false;
+            // document.getElementById('text-tab').disabled = false;
         }).catch(function (error) {
             alert('Upload Failed');
         }).finally(() => {

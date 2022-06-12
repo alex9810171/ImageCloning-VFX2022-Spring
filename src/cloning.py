@@ -87,7 +87,7 @@ def paste_image(bkg_image, obj_image, pos_x, pos_y):
                 result_image[y, x] = obj_image[y-pos_y, x-pos_x]
     return result_image
 
-def cloning_api(bkg_image, test_image, pos_x, pos_y):
+def cloning_api_for_web(bkg_image, test_image, pos_x, pos_y):
     # get object image and paste
     obj_image = get_object_image(test_image)
     return paste_image(bkg_image, obj_image, pos_x, pos_y)
@@ -99,7 +99,7 @@ if __name__ == '__main__':
     test_image = cv2.imread(config['test_image_path'])
 
     # output result image
-    result_image = cloning_api(
+    result_image = cloning_api_for_web(
         bkg_image, test_image, config['paste_position_x'], config['paste_position_y'])
     
     cv2.imwrite(config['result_image_path'], result_image)

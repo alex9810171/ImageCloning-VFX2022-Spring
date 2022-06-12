@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, Response, jsonify
 import numpy as np
 import cv2
 from upload_image import upload_to_imgur
-from cloning import cloning_api
+from cloning import cloning_api_for_web
 
 config = {
     'background_image_path': r'test/ice-coast.png',
@@ -36,7 +36,8 @@ def cloning_api():
     img = cv2.imdecode(image_buffer, cv2.IMREAD_COLOR)
     if img.shape[2] != 3:
         img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
-    result = cloning_api(bkg_image, [img], int(request.form.get('x-axis', 200)), int(request.form.get('y-axis', 200)))
+    result = cloning_api_for_web(bkg_image, img, int(request.form.get('x-axis', 200)), int(request.form.get('y-axis', 200)))
+    # print(result)
     result_link = upload_to_imgur(result)
     if result_link is None:
         return Response(status=500)
