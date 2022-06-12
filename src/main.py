@@ -45,4 +45,4 @@ def cloning_api():
         return jsonify({'result': result_link})
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', debug=True)
+    app.run(debug=True)
