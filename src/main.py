@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, Response, jsonify
 import numpy as np
 import cv2
-from upload_image import upload_to_imgur
+from module.upload_image import upload_to_imgur
 from cloning import cloning_api_for_web
 
 config = {
