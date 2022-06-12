@@ -54,7 +54,8 @@ def get_object_map(edge_image):
                 labels[y, x] = 0
             else:
                 labels[y, x] = 255
-    
+    cv2.imwrite(config['temp_image_path']+'object_label.png', labels)
+
     # dilate again to cover edge
     object_map = cv2.dilate(np.uint8(labels), config['kernel'], iterations = 2)
     cv2.imwrite(config['temp_image_path']+'object_map.png', object_map)

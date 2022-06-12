@@ -7,6 +7,7 @@
  - gunicorn
  - numpy
  - opencv-python
+ - requests
 
 ## Instruction to run the code
 1. Install Dependecies
@@ -20,7 +21,8 @@ pip install -r requirements.txt
 ./RUN.sh    (for Linux, Ubuntu system)
 ```
 
-3. Open a web tab and browse <http://localhost:5000> to enjoy our Image Cloning system~
+## Our System Website (beta!)
+Open a web tab and browse <https://imagecloning-vfx-finalproject.herokuapp.com/> to enjoy our Image Cloning system~
 
 ## Test Images
 We provide test images for evaluation at `test` folder.
