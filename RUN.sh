@@ -6,4 +6,4 @@
 # - opencv-python
 # - requests
 # email: r10525073@g.ntu.edu.tw
-python src/cloning.py
+python -m src.main

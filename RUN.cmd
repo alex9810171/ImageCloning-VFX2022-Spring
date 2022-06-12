@@ -7,5 +7,5 @@
 :: - requests
 :: email: r10525073@g.ntu.edu.tw
 @echo off
-python src\cloning.py
+python -m src.main
 pause
