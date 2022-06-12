@@ -26,5 +26,5 @@ pip install -r requirements.txt
 We provide test images for evaluation at `test` folder.
 
 ## Note
-Ice coast image from: <https://wallhere.com/en/wallpaper/717597>.
-Polar bear image from: <https://www.cs.huji.ac.il/~danix/mvclone/>.
+- Ice coast image from: <https://wallhere.com/en/wallpaper/717597>.
+- Polar bear image from: <https://www.cs.huji.ac.il/~danix/mvclone/>.
