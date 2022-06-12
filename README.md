@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ./RUN.sh    (for Linux, Ubuntu system)
 ```
 
-## Our System Website (beta!)
+## Our System Website
 Open a web tab and browse <https://imagecloning-vfx-finalproject.herokuapp.com/> to enjoy our Image Cloning system~
 
 ## Test Images

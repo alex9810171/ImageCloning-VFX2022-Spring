@@ -1,11 +1,22 @@
-from flask import Flask, render_template, request, Response, jsonify
-import numpy as np
-import cv2
-from src.cloning import cloning_api_for_web
-import requests
 from base64 import b64encode
+import numpy as np
 import random
 import string
+import cv2
+from flask import Flask, render_template, request, Response, jsonify
+import requests
+from src.cloning import cloning_api_for_web
+
+config = {
+    'background_image_path': r'test/ice-coast.png',
+    'test_image_path': r'test/polarbear.png',
+    'result_image_path': r'result.png',
+    'temp_image_path': r'image/temp/',
+    'paste_position_x': 200,
+    'paste_position_y': 200,
+    'kernel': np.ones((3, 3), np.uint8),
+    'object_threshold': 500
+}
 
 CLIENT_ID = '47a12b43b020d51'
 def upload_to_imgur(img):
@@ -26,16 +37,6 @@ def upload_to_imgur(img):
         return response['data']['link']
     else:
         return None
-config = {
-    'background_image_path': r'test/ice-coast.png',
-    'test_image_path': r'test/polarbear.png',
-    'result_image_path': r'result.png',
-    'temp_image_path': r'image/temp/',
-    'paste_position_x': 200,
-    'paste_position_y': 200,
-    'kernel': np.ones((3, 3), np.uint8),
-    'object_threshold': 500
-}
 
 app = Flask(__name__)
 bkg_image = cv2.imread(config['background_image_path'])
@@ -69,4 +70,4 @@ def cloning_api():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run('0.0.0.0', debug=True)
